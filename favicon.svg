@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<!-- two pips on a rounded square, in Ru base: oklch(0.506 0.023 155.9), dark oklch(0.619 0.023 155.9) -->
+<style>*{stroke:#5b695f;fill:#5b695f}@media(prefers-color-scheme:dark){*{stroke:#7b8a80;fill:#7b8a80}}</style>
+<rect x="1.7" y="1.7" width="12.6" height="12.6" rx="2.6" style="fill:none" stroke-width="1.4"/>
+<circle cx="5.6" cy="5.6" r="1.5"/><circle cx="10.4" cy="10.4" r="1.5"/>
+</svg>

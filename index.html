@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I paid for this.</title>
+<meta name="description" content="It was on sale.">
+<script>
+// elsewhere, at random: one of the studio's other sites, the wall's four names among
+// them, each as likely as the next. replace, so the way back does not come through here
+var sites=["wevibe.fyi","meetingcouldhavebeenan.email","theresultisonthenext.page","itsthefloor.fyi","asciimoose.mov","doesthisdoanything.click","itsallinthe.name","thepunchlineisinthe.link","thedomainisthejoke.com","thejokeisthedomain.com"];
+location.replace("https://"+sites[Math.floor(Math.random()*sites.length)]+"/");
+</script>
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/tokens.css?5">
+<style>
+body{margin:0;padding:3rem 16px 1.4rem;min-height:100svh;box-sizing:border-box;display:flex;flex-direction:column;background:var(--paper);color:var(--ink);font:19px/1.5 var(--book);font-variant-numeric:oldstyle-nums}
+main,.by{width:100%;max-width:46rem;margin:0 auto}
+main{flex:1}
+p{margin:0;line-height:1.35}
+.label{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
+.t{font-size:1.1rem}
+.m{font-variant-caps:all-small-caps;letter-spacing:.04em}
+.d{font-variant-numeric:lining-nums tabular-nums}
+.l{margin-top:.5rem}
+.go{margin-top:2rem}
+button{font:inherit;font-size:.85rem;background:none;border:0;padding:0;color:var(--ru-base,var(--ink));cursor:pointer}
+button:focus-visible{outline:1px solid var(--rule);outline-offset:4px}
+a{color:var(--ru-accent);text-underline-offset:.15em}
+.by{margin-top:3rem;text-align:right;font-size:.8rem}
+</style>
+</head>
+<body>
+<main>
+<div class="label">
+<div>
+<p class="t">ipaidforthis.site</p>
+<p class="m">a domain, a choice</p>
+<p>2026</p>
+<p class="d">$1.21</p>
+<p class="l">It was on sale.</p>
+</div>
+<button id="theme" hidden>dark</button>
+</div>
+<p class="go"><a href="https://itsallinthe.name">itsallinthe.name</a></p>
+</main>
+<p class="by">by <a href="https://github.com/bonchicbongenre/ipaidforthis.site">bonchicbongenre</a></p>
+<script>
+// theme: the system's, until the visitor turns it; nothing is kept
+var root=document.documentElement,sys=matchMedia("(prefers-color-scheme: dark)"),T=document.getElementById("theme"),
+    dark=function(){var t=root.getAttribute("data-theme");return t?t=="dark":sys.matches},
+    turn=function(){T.textContent=dark()?"light":"dark"};
+sys.addEventListener("change",function(){if(!root.getAttribute("data-theme"))turn()});
+T.onclick=function(){root.setAttribute("data-theme",dark()?"light":"dark");turn()};
+turn();T.hidden=false;
+</script>
+</body>
+</html>
