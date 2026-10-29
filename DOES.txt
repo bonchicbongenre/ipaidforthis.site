@@ -1,12 +1,13 @@
 What ipaidforthis.site does. A golf pass must keep every line true.
 
- 1. With script, the link under its label turns through the studio's other sites,
-    the wall's four names among them, slowing evenly to a stop as a wheel does, and
-    stops on one chosen at random, each as likely as the next; every one passes at
-    least once before it stops. A moment later the visitor is taken there, 2.2 to
-    3.3 seconds in all.
-    It replaces itself in the history, so the way back does not come through here.
-    With reduced motion it does not turn: it shows the one chosen, and goes. A
+ 1. With script, the link under its label turns through the studio's sites in the
+    wall's order, this one among them, slowing evenly to a stop as a wheel does,
+    and stops on one chosen at random, each as likely as the next; every one passes
+    at least once before it stops. One time in four it seems to stop one short, and
+    then goes over. It rests on the one it stops on for 0.9 seconds and takes the
+    visitor there, 2.5 to 4.8 seconds in all. If it stops on this site, it takes
+    the visitor here: the page loads again, and turns again. It replaces itself in
+    the history, so the way back does not come through here. With reduced motion it does not turn: it shows the one chosen, and goes. A
     screen reader hears the name it stops on.
  2. Every path on it does the same: the 404 is the same page, byte for byte.
  3. Without script, it stays: its label, with the price as its dimensions, and one

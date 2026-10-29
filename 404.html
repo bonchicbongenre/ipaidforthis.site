@@ -42,22 +42,23 @@ a{color:var(--ru-accent);text-underline-offset:.15em}
 </main>
 <p class="by">by <a href="https://github.com/bonchicbongenre/ipaidforthis.site">bonchicbongenre</a></p>
 <script>
-// elsewhere, at random: the link turns through the studio's other sites, the wall's four
-// names among them, slowing, and stops on one, each as likely as the next; a moment later
-// it goes there, replacing this page, so the way back does not come through here
-var sites=["wevibe.fyi","meetingcouldhavebeenan.email","theresultisonthenext.page","itsthefloor.fyi","asciimoose.mov","doesthisdoanything.click","itsallinthe.name","thepunchlineisinthe.link","thedomainisthejoke.com","thejokeisthedomain.com"],
+// elsewhere, at random: the link turns through the studio's sites, in the wall's order,
+// this one among them, and stops on one, each as likely as the next; a moment later it
+// goes there, replacing this page, so the way back does not come through here
+var sites=["wevibe.fyi","meetingcouldhavebeenan.email","theresultisonthenext.page","itsthefloor.fyi","asciimoose.mov","doesthisdoanything.click","ipaidforthis.site","itsallinthe.name","thepunchlineisinthe.link","thedomainisthejoke.com","thejokeisthedomain.com"],
     n=sites.length,a=document.getElementById("go"),
     calm=matchMedia("(prefers-reduced-motion: reduce)").matches,
     to=Math.floor(Math.random()*n),
     // where the turning starts, and how many names it passes: every one at least once
     at=calm?to:Math.floor(Math.random()*n),turns=calm?0:n+(to-at+n)%n,i=0,
     // it turns for 1.6 to 2.7 s, slowing evenly to a stop as a wheel does, so the i-th
-    // name comes at spin*(1-sqrt(1-i/turns)); then it rests on the last for a moment
-    spin=1600+1100*Math.random(),
+    // name comes at spin*(1-sqrt(1-i/turns)); one time in four it seems to stop one
+    // short, and then goes over
+    spin=1600+1100*Math.random(),hang=Math.random()<.25?2.4:1,
     step=function(){
-      var k=(at+i)%n;a.textContent=sites[k];a.href="https://"+sites[k]+"/";
-      if(i<turns){i++;setTimeout(step,spin*(Math.sqrt(1-(i-1)/turns)-Math.sqrt(1-i/turns)))}
-      else{document.getElementById("s").textContent=sites[to];setTimeout(function(){location.replace(a.href)},calm?800:600)}};
+      var k=(at+i)%n;a.textContent=sites[k];a.href=sites[k]=="ipaidforthis.site"?"/":"https://"+sites[k]+"/";
+      if(i<turns){i++;setTimeout(step,spin*(Math.sqrt(1-(i-1)/turns)-Math.sqrt(1-i/turns))*(i==turns?hang:1))}
+      else{document.getElementById("s").textContent=sites[to];setTimeout(function(){location.replace(a.href)},900)}};
 step();
 // theme: the system's, until the visitor turns it; nothing is kept
 var root=document.documentElement,sys=matchMedia("(prefers-color-scheme: dark)"),T=document.getElementById("theme"),
