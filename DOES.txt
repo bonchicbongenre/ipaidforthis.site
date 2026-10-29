@@ -1,9 +1,10 @@
 What ipaidforthis.site does. A golf pass must keep every line true.
 
  1. With script, the link under its label turns through the studio's other sites,
-    the wall's four names among them, slowing, and stops on one chosen at random,
-    each as likely as the next; every one passes at least once before it stops. A
-    moment later the visitor is taken there, between two and three seconds in all.
+    the wall's four names among them, slowing evenly to a stop as a wheel does, and
+    stops on one chosen at random, each as likely as the next; every one passes at
+    least once before it stops. A moment later the visitor is taken there, 2.2 to
+    3.3 seconds in all.
     It replaces itself in the history, so the way back does not come through here.
     With reduced motion it does not turn: it shows the one chosen, and goes. A
     screen reader hears the name it stops on.
