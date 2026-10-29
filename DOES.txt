@@ -1,8 +1,12 @@
 What ipaidforthis.site does. A golf pass must keep every line true.
 
- 1. With script, it sends the visitor at once to one of the studio's other sites,
-    chosen at random, each as likely as the next, the wall's four names among them.
+ 1. With script, the link under its label turns through the studio's other sites,
+    the wall's four names among them, slowing, and stops on one chosen at random,
+    each as likely as the next; every one passes at least once before it stops. A
+    moment later the visitor is taken there, between two and three seconds in all.
     It replaces itself in the history, so the way back does not come through here.
+    With reduced motion it does not turn: it shows the one chosen, and goes. A
+    screen reader hears the name it stops on.
  2. Every path on it does the same: the 404 is the same page, byte for byte.
  3. Without script, it stays: its label, with the price as its dimensions, and one
     plain link, to the wall.
@@ -10,6 +14,6 @@ What ipaidforthis.site does. A golf pass must keep every line true.
     wall and not on the list, or on the list and not on the wall, fails it.
  5. The title (the tab, a link's preview) is "I paid for this."; a preview adds
     "It was on sale."
- 6. Colours come from the house tokens, Ru. The theme button is in the page, as on
-    every site, and shows only with script.
+ 6. Colours come from the house tokens, Ru. The theme button, as on every site,
+    shows with script, for as long as the visitor is here.
  7. The favicon is two pips on a rounded square, in Ru.
